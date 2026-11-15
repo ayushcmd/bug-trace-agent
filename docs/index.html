@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore BugTrace-Agent's bug detection, verification, and human review workflow in an interactive browser demo.">
+  <title>BugTrace — Debug with confidence</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-icon">bt</span> BugTrace<span class="muted"> / agent</span></a><nav aria-label="Main navigation"><a href="#workspace">Workspace</a><a href="#about">How it works</a><span class="badge"><i></i> Browser demo</span></nav></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">LESS GUESSWORK. MORE SHIPPED CODE.</p><h1>Find the bug.<br><span>Trace the fix.</span></h1><p class="lead">From a failing test to a fix you can review.<br>Explore the BugTrace workflow, right in your browser.</p></div><div class="intro-note"><span class="orbit">⌘</span><p>Inspect → Verify → Review</p><small>You stay in control of the final change.</small></div></section>
+    <section id="workspace" class="workspace" aria-label="Demo workspace">
+      <div class="workspace-heading"><div><span class="eyebrow">WORKSPACE / 001</span><h2>Authentication bug hunt</h2></div><span class="badge neutral">sample_target / auth.py</span></div>
+      <div class="workspace-grid">
+        <aside><p class="step-label">01 / THE ISSUE</p><h3>A login that lets everyone in.</h3><p>The sample login function returns true for every username and password. Trace the failure and review a credential check.</p><label for="issue-id">Issue reference</label><input id="issue-id" maxlength="60" value="BUG-101" autocomplete="off"><div class="report"><span class="dot"></span><div><strong>Authentication bypass</strong><p>Invalid passwords, unknown users, and empty credentials are accepted.</p></div></div><button id="run" class="primary">Trace sample bug <span>↗</span></button><p class="fine">A deterministic demo of this sample only. No AI calls, uploads, or API keys.</p><button id="reset" class="text-button" disabled>Reset workspace</button></aside>
+        <div class="workarea"><div class="status-line"><span class="step-label">02 / INSPECT & VERIFY</span><span id="status" role="status" aria-live="polite">Ready to trace</span></div><div class="code-heading"><span>auth.py</span><span id="code-label">Original · Python</span></div><pre><code id="code"></code></pre><div class="test-heading"><h3>Verification checks</h3><span id="test-count">Waiting for a run</span></div><div id="tests" class="tests"></div><div id="activity" class="activity" role="log" aria-live="polite">Ready. Start a trace to inspect the sample.</div><div id="review" class="review" hidden><div><strong>03 / Ready for your review</strong><p>The browser checks pass. Review the Python proposal above.</p></div><button id="approve" class="primary">Approve demo fix</button></div><a id="download" class="download" hidden download="auth.py">Download proposed auth.py ↓</a></div>
+      </div>
+    </section>
+    <section id="about" class="about"><div><p class="eyebrow">THE WORKFLOW</p><h2>Small steps.<br>Visible evidence.</h2></div><article><span>01</span><h3>Inspect the failure</h3><p>See how a permissive login behaves against four concrete credential checks.</p></article><article><span>02</span><h3>Verify the change</h3><p>Run equivalent JavaScript checks on the proposed logic. Python and pytest run in the separate backend.</p></article><article><span>03</span><h3>Keep a human in the loop</h3><p>Review and download the sample fix. Demo approval never commits or pushes to a repository.</p></article></section>
+  </main><footer><span class="brand">BugTrace<span class="muted"> / agent</span></span><p>Built by Ayush Raj · A browser-based project demo</p><span>HTML + CSS + JavaScript</span></footer>
+</body>
+</html>

@@ -8,11 +8,11 @@ from app.config import settings
 
 def main():
     print("=" * 60)
-    print(f"🚀 Starting {settings.PROJECT_NAME} v{settings.VERSION}")
-    print(f"📍 Active Provider: {settings.get_active_provider().upper()}")
-    print(f"🌍 Environment:     {settings.ENVIRONMENT}")
-    print(f"🔌 Listening on:    http://{settings.HOST}:{settings.PORT}")
-    print(f"📖 Swagger Docs:    http://localhost:{settings.PORT}/docs")
+    print(f"Starting {settings.PROJECT_NAME} v{settings.VERSION}")
+    print(f"Active Provider: {settings.get_active_provider().upper()}")
+    print(f"Environment:     {settings.ENVIRONMENT}")
+    print(f"Listening on:    http://{settings.HOST}:{settings.PORT}")
+    print(f"Swagger Docs:    http://localhost:{settings.PORT}/docs")
     print("=" * 60 + "\n")
     
     uvicorn.run(
