@@ -1,5 +1,13 @@
 # 🤖 BugTrace-Agent
 
+## Static website / GitHub Pages
+
+A standalone browser demo is available in [`docs/index.html`](docs/index.html).
+Open it directly, or publish the repository's `/docs` folder using GitHub Pages.
+See [hosting instructions](docs/HOSTING.md). It uses HTML, CSS, and JavaScript
+without a build step or Python server. The demo verifies equivalent JavaScript
+login logic; live AI debugging remains a separate backend feature.
+
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)
